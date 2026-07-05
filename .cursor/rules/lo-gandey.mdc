@@ -1,0 +1,57 @@
+---
+description: Lo Gandey project context — branding, architecture, Maldives defaults, deployment
+alwaysApply: true
+---
+
+# Lo Gandey — Project Memory
+
+**Product:** Lo Gandey — smart mirror platform for the Maldives (commercial business).
+**Repo:** https://github.com/adhuhaam/logandey | **Owner:** adhuhaam | **Contact:** adhuhamlayaal55@gmail.com
+**Branding:** Use "Lo Gandey" only in user-facing docs/marketing. Do not reference upstream project names in README or customer materials.
+
+## Architecture (dual process)
+
+- **Node server** (`js/app.js`, `js/server.js`): loads config, Express on port 8080, Socket.IO, optional `node_helper.js` per module
+- **Browser/Electron client** (`js/main.js`, `js/loader.js`, `js/module.js`): renders modules, fetches config from `GET /config`
+- **Electron** (`js/electron.js`): Pi/production fullscreen; **server-only** (`npm run server`) for dev/browser
+- Config loads **only at server startup** — restart server after `config/config.js` changes
+
+## Key paths
+
+| Path | Role |
+|------|------|
+| `config/config.js` | Active config (gitignored) |
+| `config/config.js.sample` | Committed template — Maldives defaults |
+| `defaultmodules/` | Built-in modules (clock, weather, calendar, newsfeed, …) |
+| `modules/` | Custom/third-party modules |
+| `js/module.js` | Browser module base — `Module.register()`, `updateDom()`, notifications |
+| `js/node_helper.js` | Server-side helper base — API fetches, `sendSocketNotification()` |
+
+## Maldives defaults (Malé)
+
+- `locale`: `en-MV` | `timezone`: `Indian/Maldives` | `lat/lon`: `4.1755`, `73.5093`
+- Weather: Open-Meteo (no API key) | Calendar: Google MV holidays ICS | News: TNN local RSS
+
+## Run commands
+
+- Dev browser: `npm run server` → http://localhost:8080
+- Windows: `npm run start:windows` | Pi: `node --run start:x11`
+- Validate: `npm run config:check` | Install: `node --run install-mm`
+- Node **22+** required
+
+## Module system
+
+- Browser: `Module.register(name, { defaults, start(), getDom/getTemplate(), notificationReceived() })`
+- Server helper (optional): `node_helper.js` — weather, calendar, newsfeed use this pattern
+- Positions: `top_left`, `top_right`, `bottom_bar`, `lower_third`, etc. (`js/positions.js`)
+- Communication: `sendNotification()` (browser↔browser), `sendSocketNotification()` (browser↔Node)
+
+## Deployment target
+
+- **Raspberry Pi 4/5**, Raspberry Pi OS 64-bit **desktop** (not Lite for Electron)
+- Auto-start: pm2 or systemd | Kiosk: disable screen blanking, auto-login
+- New machine: `cp config/config.js.sample config/config.js`
+
+## Business direction
+
+Turnkey mirrors, software licenses, custom modules (resort branding, prayer times, etc.). README is the marketing page — keep it customer-focused, Maldives-local, no upstream attribution in public docs.
