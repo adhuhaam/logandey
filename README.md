@@ -1,60 +1,96 @@
-# ![MagicMirror²: The open source modular smart mirror platform.](.github/header.png)
+# Lo Gandey
 
-<p style="text-align: center">
-  <a href="https://choosealicense.com/licenses/mit">
-  <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
- </a>
- <img src="https://img.shields.io/github/actions/workflow/status/magicmirrororg/magicmirror/automated-tests.yaml" alt="GitHub Actions">
- <img src="https://img.shields.io/github/check-runs/magicmirrororg/magicmirror/master" alt="Build Status">
- <a href="https://github.com/MagicMirrorOrg/MagicMirror">
-  <img src="https://img.shields.io/github/stars/magicmirrororg/magicmirror?style=social" alt="GitHub Stars">
- </a>
-</p>
+**Lo Gandey** is a smart mirror platform built for the Maldives — a modular, always-on display for homes, hotels, and retail spaces.
 
-**MagicMirror²** is an open source modular smart mirror platform. With a growing list of installable modules, the **MagicMirror²** allows you to convert your hallway or bathroom mirror into your personal assistant. **MagicMirror²** is built by the creator of [the original MagicMirror](https://michaelteeuw.nl/tagged/magicmirror) with the incredible help of a [growing community of contributors](https://github.com/MagicMirrorOrg/MagicMirror/graphs/contributors).
+It is based on [MagicMirror²](https://github.com/MagicMirrorOrg/MagicMirror), the open source smart mirror project, customized with local defaults for Malé and the wider Maldives.
 
-MagicMirror² focuses on a modular plugin system and uses [Electron](https://www.electronjs.org/) as an application wrapper. So no more web server or browser installs necessary!
+![MagicMirror² demo](https://magicmirror.builders/img/demo.gif)
 
-![Animated demonstration of MagicMirror²](https://magicmirror.builders/img/demo.gif)
+## Features
 
-## Documentation
+- **Clock & calendar** — Maldives timezone (`Indian/Maldives`) and public holidays
+- **Weather** — current conditions and forecast via Open-Meteo (Malé coordinates)
+- **News** — local headlines from TNN Maldives
+- **Modular layout** — add or remove widgets via `config/config.js`
+- **Runs on Raspberry Pi** — fullscreen mirror mode, or browser-only for development
 
-For the full documentation including **[installation instructions](https://docs.magicmirror.builders/getting-started/installation.html)**, please visit our dedicated documentation website: [https://docs.magicmirror.builders](https://docs.magicmirror.builders).
+## Quick start
 
-## Links
+### Requirements
 
-- Website: [https://magicmirror.builders](https://magicmirror.builders)
-- Documentation: [https://docs.magicmirror.builders](https://docs.magicmirror.builders)
-- Forum: [https://forum.magicmirror.builders](https://forum.magicmirror.builders)
-  - Technical discussions: <https://forum.magicmirror.builders/category/11/core-system>
-- Discord: [https://discord.gg/J5BAtvx](https://discord.gg/J5BAtvx)
-- Blog: [https://michaelteeuw.nl/tagged/magicmirror](https://michaelteeuw.nl/tagged/magicmirror)
-- Donations: [https://magicmirror.builders/#donate](https://magicmirror.builders/#donate)
+- [Node.js](https://nodejs.org/) 22 or higher
+- Raspberry Pi OS (64-bit, desktop) for production mirrors
+- Windows, macOS, or Linux for development
 
-## Contributing Guidelines
+### Install
 
-Contributions of all kinds are welcome, not only in the form of code but also with regards to
+```bash
+git clone https://github.com/adhuhaam/logandey.git
+cd logandey
+node --run install-mm
+cp config/config.js.sample config/config.js
+```
 
-- bug reports
-- documentation
-- translations
+### Run
 
-For the full contribution guidelines, check out: [https://docs.magicmirror.builders/about/contributing.html](https://docs.magicmirror.builders/about/contributing.html)
+**Browser (development):**
 
-## Enjoying MagicMirror? Consider a donation!
+```bash
+npm run server
+```
 
-MagicMirror² is Open Source and free. That doesn't mean we don't need any money.
+Open [http://localhost:8080](http://localhost:8080)
 
-Please consider a donation to help us cover the ongoing costs like webservers and email services.
-If we receive enough donations we might even be able to free up some working hours and spend some extra time improving the MagicMirror² core.
+**Windows (Electron):**
 
-To donate, please follow [this](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G5D8E9MR5DTD2&source=url) link.
+```bash
+npm run start:windows
+```
 
-<p style="text-align: center">
-  <a href="https://forum.magicmirror.builders/topic/728/magicmirror-is-voted-number-1-in-the-magpi-top-50">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://magicmirror.builders/img/magpi-best-watermark.png">
-      <img src="https://magicmirror.builders/img/magpi-best-watermark-custom.png" width="150" alt="MagPi Top 50">
-    </picture>
-  </a>
-</p>
+**Raspberry Pi (Linux):**
+
+```bash
+node --run start:x11
+```
+
+## Configuration
+
+Edit `config/config.js` to change modules, layout, and API settings. The included sample config is pre-set for the Maldives:
+
+| Setting | Default |
+|---------|---------|
+| Locale | `en-MV` |
+| Timezone | `Indian/Maldives` |
+| Location | Malé (4.1755, 73.5093) |
+| Calendar | Maldives public holidays |
+| News | TNN Maldives local news |
+
+Validate your config:
+
+```bash
+npm run config:check
+```
+
+## Project structure
+
+| Path | Purpose |
+|------|---------|
+| `config/` | Mirror configuration and custom CSS |
+| `defaultmodules/` | Built-in modules (clock, weather, calendar, etc.) |
+| `modules/` | Custom and third-party modules |
+| `js/` | Core application and server |
+
+## Hardware
+
+Lo Gandey targets **Raspberry Pi 4 or 5** with Raspberry Pi OS (64-bit desktop). See the [MagicMirror² requirements](https://docs.magicmirror.builders/getting-started/requirements.html) for full details.
+
+## Upstream & license
+
+Lo Gandey is a fork of **MagicMirror²** (MIT License). Core platform credit goes to [Michael Teeuw](https://michaelteeuw.nl/tagged/magicmirror) and the [MagicMirror community](https://github.com/MagicMirrorOrg/MagicMirror/graphs/contributors).
+
+- Upstream docs: [docs.magicmirror.builders](https://docs.magicmirror.builders)
+- Upstream repo: [MagicMirrorOrg/MagicMirror](https://github.com/MagicMirrorOrg/MagicMirror)
+
+## Repository
+
+[github.com/adhuhaam/logandey](https://github.com/adhuhaam/logandey)
