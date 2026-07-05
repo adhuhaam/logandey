@@ -1,30 +1,17 @@
 {
-	"name": "magicmirror",
-	"version": "2.37.0",
-	"description": "The open source modular smart mirror platform.",
+	"name": "logandey",
+	"version": "1.0.0",
+	"description": "Lo Gandey — smart mirror platform for the Maldives.",
 	"keywords": [
-		"magic mirror",
-		"magicmirror",
+		"lo gandey",
+		"logandey",
 		"smart mirror",
-		"mirror UI",
-		"modular"
+		"maldives",
+		"mirror display"
 	],
-	"homepage": "https://magicmirror.builders",
-	"bugs": {
-		"url": "https://github.com/MagicMirrorOrg/MagicMirror/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/MagicMirrorOrg/MagicMirror"
-	},
-	"license": "MIT",
-	"author": "Michael Teeuw",
-	"contributors": [
-		{
-			"name": "MagicMirror contributors",
-			"url": "https://github.com/MagicMirrorOrg/MagicMirror/graphs/contributors"
-		}
-	],
+	"license": "UNLICENSED",
+	"author": "Lo Gandey",
+	"private": true,
 	"type": "commonjs",
 	"imports": {
 		"#server_functions": {

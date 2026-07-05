@@ -43,11 +43,11 @@
 	"NEWSFEED_NO_ITEMS": "Saat ini tidak ada berita.",
 	"NEWSFEED_ARTICLE_UNAVAILABLE": "Artikel tidak dapat ditampilkan di sini.",
 
-	"UPDATE_NOTIFICATION": "Memperbarui MagicMirror² tersedia.",
+	"UPDATE_NOTIFICATION": "Memperbarui Lo Gandey² tersedia.",
 	"UPDATE_NOTIFICATION_MODULE": "Memperbarui tersedia untuk modul {MODULE_NAME}.",
 	"UPDATE_INFO_SINGLE": "Instalasi saat ini tertinggal {COMMIT_COUNT} commit pada cabang {BRANCH_NAME}.",
 	"UPDATE_INFO_MULTIPLE": "Instalasi saat ini tertinggal {COMMIT_COUNT} commits pada cabang {BRANCH_NAME}.",
 	"UPDATE_NOTIFICATION_DONE": "Pembaruan modul {MODULE_NAME} selesai.",
 	"UPDATE_NOTIFICATION_ERROR": "Terjadi kesalahan saat memperbarui modul {MODULE_NAME}.",
-	"UPDATE_NOTIFICATION_NEED-RESTART": "Diperlukan restart MagicMirror."
+	"UPDATE_NOTIFICATION_NEED-RESTART": "Diperlukan restart Lo Gandey."
 }

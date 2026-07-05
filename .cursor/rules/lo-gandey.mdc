@@ -5,53 +5,38 @@ alwaysApply: true
 
 # Lo Gandey — Project Memory
 
-**Product:** Lo Gandey — smart mirror platform for the Maldives (commercial business).
-**Repo:** https://github.com/adhuhaam/logandey | **Owner:** adhuhaam | **Contact:** adhuhamlayaal55@gmail.com
-**Branding:** Use "Lo Gandey" only in user-facing docs/marketing. Do not reference upstream project names in README or customer materials.
+**Product:** Lo Gandey — proprietary smart mirror platform for the Maldives (commercial business).
+**Owner:** Lo Gandey | **Contact:** adhuhamlayaal55@gmail.com
+**Branding:** Use "Lo Gandey" only. No upstream names, GitHub links, or contributor references in user-facing materials.
 
 ## Architecture (dual process)
 
-- **Node server** (`js/app.js`, `js/server.js`): loads config, Express on port 8080, Socket.IO, optional `node_helper.js` per module
-- **Browser/Electron client** (`js/main.js`, `js/loader.js`, `js/module.js`): renders modules, fetches config from `GET /config`
-- **Electron** (`js/electron.js`): Pi/production fullscreen; **server-only** (`npm run server`) for dev/browser
-- Config loads **only at server startup** — restart server after `config/config.js` changes
+- **Node server** (`js/app.js`, `js/server.js`): config, Express :8080, Socket.IO, optional `node_helper.js`
+- **Browser/Electron client** (`js/main.js`, `js/loader.js`, `js/module.js`): UI modules, `GET /config`
+- Config loads **only at server restart**
 
 ## Key paths
 
-| Path | Role |
-|------|------|
-| `config/config.js` | Active config (gitignored) |
-| `config/config.js.sample` | Committed template — Maldives defaults |
-| `defaultmodules/` | Built-in modules (clock, weather, calendar, newsfeed, …) |
-| `modules/` | Custom/third-party modules |
-| `js/module.js` | Browser module base — `Module.register()`, `updateDom()`, notifications |
-| `js/node_helper.js` | Server-side helper base — API fetches, `sendSocketNotification()` |
+- `config/config.js` — active config (gitignored)
+- `config/config.js.sample` — Maldives template (committed)
+- `defaultmodules/` — built-in modules | `modules/` — custom modules
+- `updatenotification` module **removed** from default config (no git/update checks)
 
 ## Maldives defaults (Malé)
 
 - `locale`: `en-MV` | `timezone`: `Indian/Maldives` | `lat/lon`: `4.1755`, `73.5093`
-- Weather: Open-Meteo (no API key) | Calendar: Google MV holidays ICS | News: TNN local RSS
+- Weather: Open-Meteo | Calendar: Google MV holidays ICS | News: TNN local RSS
 
 ## Run commands
 
-- Dev browser: `npm run server` → http://localhost:8080
-- Windows: `npm run start:windows` | Pi: `node --run start:x11`
-- Validate: `npm run config:check` | Install: `node --run install-mm`
-- Node **22+** required
+- Dev: `npm run server` → localhost:8080 | Pi: `node --run start:x11` | Windows: `npm run start:windows`
+- Install: `node --run install-mm` | Validate: `npm run config:check` | Node 22+
 
-## Module system
+## Deployment
 
-- Browser: `Module.register(name, { defaults, start(), getDom/getTemplate(), notificationReceived() })`
-- Server helper (optional): `node_helper.js` — weather, calendar, newsfeed use this pattern
-- Positions: `top_left`, `top_right`, `bottom_bar`, `lower_third`, etc. (`js/positions.js`)
-- Communication: `sendNotification()` (browser↔browser), `sendSocketNotification()` (browser↔Node)
+- Raspberry Pi 4/5, Pi OS 64-bit desktop, pm2/systemd auto-start, kiosk mode
+- Off-grid standalone — no GitHub dependency in product UX
 
-## Deployment target
+## Business
 
-- **Raspberry Pi 4/5**, Raspberry Pi OS 64-bit **desktop** (not Lite for Electron)
-- Auto-start: pm2 or systemd | Kiosk: disable screen blanking, auto-login
-- New machine: `cp config/config.js.sample config/config.js`
-
-## Business direction
-
-Turnkey mirrors, software licenses, custom modules (resort branding, prayer times, etc.). README is the marketing page — keep it customer-focused, Maldives-local, no upstream attribution in public docs.
+Turnkey mirrors, software licenses, custom modules. README is the sales page — email-only contact, no public repo links.

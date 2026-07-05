@@ -45,11 +45,11 @@
 	"NEWSFEED_NO_ITEMS": "Momente neniu novaĵoj.",
 	"NEWSFEED_ARTICLE_UNAVAILABLE": "Artikolo ne estas montrebla ĉi tie.",
 
-	"UPDATE_NOTIFICATION": "Ĝisdatigo por MagicMirror² disponebla.",
+	"UPDATE_NOTIFICATION": "Ĝisdatigo por Lo Gandey² disponebla.",
 	"UPDATE_NOTIFICATION_MODULE": "Ĝisdatigo por la modulo „{MODULE_NAME}“ disponebla.",
 	"UPDATE_INFO_SINGLE": "La nuna instalado estas unu komito malantaŭ la {BRANCH_NAME}-branĉo.",
 	"UPDATE_INFO_MULTIPLE": "La nuna instalado estas {COMMIT_COUNT} komitoj malantaŭ la {BRANCH_NAME}-branĉo.",
 	"UPDATE_NOTIFICATION_DONE": "Ĝisdatigo por la modulo {MODULE_NAME} finita.",
 	"UPDATE_NOTIFICATION_ERROR": "Eraro dum la ĝisdatigo de la modulo {MODULE_NAME}.",
-	"UPDATE_NOTIFICATION_NEED-RESTART": "MagicMirror devas esti restartigita."
+	"UPDATE_NOTIFICATION_NEED-RESTART": "Lo Gandey devas esti restartigita."
 }

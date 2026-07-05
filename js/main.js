@@ -567,7 +567,7 @@ export const MM = {
 	 * Main init method.
 	 */
 	async init () {
-		Log.info("Initializing MagicMirror².");
+		Log.info("Initializing Lo Gandey.");
 		await loadConfig();
 
 		Log.setLogLevel(config.logLevel);
@@ -617,7 +617,7 @@ export const MM = {
 						Log.warn("Refreshing Website because server was restarted");
 					}
 				} catch (err) {
-					Log.error(`MagicMirror not reachable: ${err}`);
+					Log.error(`Lo Gandey not reachable: ${err}`);
 				}
 			}, config.checkServerInterval);
 		}

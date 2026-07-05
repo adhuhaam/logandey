@@ -42,11 +42,11 @@
 	"NEWSFEED_NO_ITEMS": "لا توجد أخبار في الوقت الحالي.",
 	"NEWSFEED_ARTICLE_UNAVAILABLE": "لا يمكن عرض المقالة هنا.",
 
-	"UPDATE_NOTIFICATION": "تحديث MagicMirror² متاح.",
+	"UPDATE_NOTIFICATION": "تحديث Lo Gandey² متاح.",
 	"UPDATE_NOTIFICATION_MODULE": "تحديث متاح لوحدة {MODULE_NAME}.",
 	"UPDATE_INFO_SINGLE": "التثبيت الحالي متخلف عن تحديث واحد على فرع {BRANCH_NAME}.",
 	"UPDATE_INFO_MULTIPLE": "التثبيت الحالي متخلف عن {COMMIT_COUNT} تحديثات على فرع {BRANCH_NAME}.",
 	"UPDATE_NOTIFICATION_DONE": "تم التحديث لوحدة {MODULE_NAME}",
 	"UPDATE_NOTIFICATION_ERROR": "حدث خطأ أثناء تحديث وحدة {MODULE_NAME}",
-	"UPDATE_NOTIFICATION_NEED-RESTART": "يتطلب إعادة تشغيل MagicMirror."
+	"UPDATE_NOTIFICATION_NEED-RESTART": "يتطلب إعادة تشغيل Lo Gandey."
 }

@@ -69,7 +69,7 @@ function Server (configObj) {
 						"────────────────────────────────────────────────────────────────",
 						` PORT IN USE: ${bindAddr}:${port}`,
 						"",
-						" Another process (most likely another MagicMirror instance)",
+						" Another process (most likely another Lo Gandey instance)",
 						" is already using this port.",
 						"",
 						" Stop the other process (free the port) or use a different port.",

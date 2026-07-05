@@ -43,11 +43,11 @@
 	"NEWSFEED_NO_ITEMS": "Dim newyddion ar hyn o bryd.",
 	"NEWSFEED_ARTICLE_UNAVAILABLE": "Ni ellir dangos yr erthygl yma.",
 
-	"UPDATE_NOTIFICATION": "MagicMirror² mwy diweddar yn barod.",
+	"UPDATE_NOTIFICATION": "Lo Gandey² mwy diweddar yn barod.",
 	"UPDATE_NOTIFICATION_MODULE": "Mae diweddaraiad ar gyfer y modiwl {MODULE_NAME}.",
 	"UPDATE_INFO_SINGLE": "Mae'r fersiwn bresenol {COMMIT_COUNT} commit tu ôl i'r gangen {BRANCH_NAME}.",
 	"UPDATE_INFO_MULTIPLE": "Mae'r fersiwn bresenol {COMMIT_COUNT} commit tu ôl i'r gangen {BRANCH_NAME}.",
 	"UPDATE_NOTIFICATION_DONE": "Diweddariad wedi'i gwblhau ar gyfer y modiwl {MODULE_NAME}",
 	"UPDATE_NOTIFICATION_ERROR": "Gwall diweddariad ar gyfer y modiwl {MODULE_NAME}",
-	"UPDATE_NOTIFICATION_NEED-RESTART": "Mae angen ailgychwyn MagicMirror."
+	"UPDATE_NOTIFICATION_NEED-RESTART": "Mae angen ailgychwyn Lo Gandey."
 }

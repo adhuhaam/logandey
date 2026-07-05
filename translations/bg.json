@@ -44,11 +44,11 @@
 	"NEWSFEED_NO_ITEMS": "Няма новини в момента.",
 	"NEWSFEED_ARTICLE_UNAVAILABLE": "Статията не може да бъде показана тук.",
 
-	"UPDATE_NOTIFICATION": "Налична е актуализация за MagicMirror².",
+	"UPDATE_NOTIFICATION": "Налична е актуализация за Lo Gandey².",
 	"UPDATE_NOTIFICATION_MODULE": "Налична е актуализация за модула „{MODULE_NAME}“.",
 	"UPDATE_INFO_SINGLE": "Инсталираната версия е с {COMMIT_COUNT} ревизия назад от клона „{BRANCH_NAME}“.",
 	"UPDATE_INFO_MULTIPLE": "Инсталираната версия е с {COMMIT_COUNT} ревизии назад от клона „{BRANCH_NAME}“.",
 	"UPDATE_NOTIFICATION_DONE": "Актуализацията на модула „{MODULE_NAME}“ е завършена.",
 	"UPDATE_NOTIFICATION_ERROR": "Грешка при актуализацията на модула „{MODULE_NAME}“",
-	"UPDATE_NOTIFICATION_NEED-RESTART": "Необходимо е рестартиране на MagicMirror."
+	"UPDATE_NOTIFICATION_NEED-RESTART": "Необходимо е рестартиране на Lo Gandey."
 }

@@ -4,7 +4,7 @@ const exec = util.promisify(require("node:child_process").exec);
 const fs = require("node:fs");
 
 const createReleaseNotes = async () => {
-	let repoName = "MagicMirrorOrg/MagicMirror";
+	let repoName = "LoGandey";
 	if (process.env.GITHUB_REPOSITORY) {
 		repoName = process.env.GITHUB_REPOSITORY;
 	}

@@ -44,11 +44,11 @@
 	"NEWSFEED_NO_ITEMS": "Ei uutisia tällä hetkellä.",
 	"NEWSFEED_ARTICLE_UNAVAILABLE": "Artikkelia ei voi näyttää täällä.",
 
-	"UPDATE_NOTIFICATION": "MagicMirror² päivitys saatavilla.",
+	"UPDATE_NOTIFICATION": "Lo Gandey² päivitys saatavilla.",
 	"UPDATE_NOTIFICATION_MODULE": "Päivitys saatavilla moduulille {MODULE_NAME}.",
 	"UPDATE_INFO_SINGLE": "Nykyasennus on {COMMIT_COUNT} muutoksen jäljessä {BRANCH_NAME} haaraan nähden.",
 	"UPDATE_INFO_MULTIPLE": "Nykyasennus on {COMMIT_COUNT} muutosta jäljessä {BRANCH_NAME} haaraan nähden.",
 	"UPDATE_NOTIFICATION_DONE": "Päivitys moduulille {MODULE_NAME} valmis.",
 	"UPDATE_NOTIFICATION_ERROR": "Virhe moduulin {MODULE_NAME} päivityksessä.",
-	"UPDATE_NOTIFICATION_NEED-RESTART": "MagicMirror tulee käynnistää uudelleen."
+	"UPDATE_NOTIFICATION_NEED-RESTART": "Lo Gandey tulee käynnistää uudelleen."
 }

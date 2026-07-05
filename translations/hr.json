@@ -44,11 +44,11 @@
 	"NEWSFEED_NO_ITEMS": "Trenutno nema vijesti.",
 	"NEWSFEED_ARTICLE_UNAVAILABLE": "Članak se ne može prikazati ovdje.",
 
-	"UPDATE_NOTIFICATION": "Dostupna je aktualizacija MagicMirror².",
+	"UPDATE_NOTIFICATION": "Dostupna je aktualizacija Lo Gandey².",
 	"UPDATE_NOTIFICATION_MODULE": "Dostupna je aktualizacija modula {MODULE_NAME}.",
 	"UPDATE_INFO_SINGLE": "Instalirana verzija {COMMIT_COUNT} commit kasni za branch-om {BRANCH_NAME}.",
 	"UPDATE_INFO_MULTIPLE": "Instalirana verzija {COMMIT_COUNT} commit-ova kasni za branch-om {BRANCH_NAME}.",
 	"UPDATE_NOTIFICATION_DONE": "Ažuriranje je završeno za modul {MODULE_NAME}.",
 	"UPDATE_NOTIFICATION_ERROR": "Greška pri ažuriranju modula {MODULE_NAME}.",
-	"UPDATE_NOTIFICATION_NEED-RESTART": "Potrebno je ponovno pokretanje MagicMirror-a."
+	"UPDATE_NOTIFICATION_NEED-RESTART": "Potrebno je ponovno pokretanje Lo Gandey-a."
 }

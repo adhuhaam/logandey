@@ -43,11 +43,11 @@
 	"NEWSFEED_NO_ITEMS": "Op it stuit gjin nijsberjochten.",
 	"NEWSFEED_ARTICLE_UNAVAILABLE": "Artikel kin hjir net werjûn wurde.",
 
-	"UPDATE_NOTIFICATION": "Der is in update beskikber foar MagicMirror².",
+	"UPDATE_NOTIFICATION": "Der is in update beskikber foar Lo Gandey².",
 	"UPDATE_NOTIFICATION_MODULE": "Der is in update beskikber foar it {MODULE_NAME} module.",
 	"UPDATE_INFO_SINGLE": "Dizze ynstallaasje is {BRANCH_NAME} commit efter op {COMMIT_COUNT} commits.",
 	"UPDATE_INFO_MULTIPLE": "Dizze ynstallaasje is {BRANCH_NAME} commits achter op {COMMIT_COUNT} commits.",
 	"UPDATE_NOTIFICATION_DONE": "It {MODULE_NAME} module is bywurke.",
 	"UPDATE_NOTIFICATION_ERROR": "Fout by it bywurkje fan it {MODULE_NAME} module.",
-	"UPDATE_NOTIFICATION_NEED-RESTART": "It is nedich om MagicMirror te herstarten."
+	"UPDATE_NOTIFICATION_NEED-RESTART": "It is nedich om Lo Gandey te herstarten."
 }

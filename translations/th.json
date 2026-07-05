@@ -44,11 +44,11 @@
 	"NEWSFEED_NO_ITEMS": "ไม่มีข่าวในขณะนี้",
 	"NEWSFEED_ARTICLE_UNAVAILABLE": "ไม่สามารถแสดงบทความที่นี่ได้",
 
-	"UPDATE_NOTIFICATION": "MagicMirror² มีการอัปเดต",
+	"UPDATE_NOTIFICATION": "Lo Gandey² มีการอัปเดต",
 	"UPDATE_NOTIFICATION_MODULE": "มีการอัปเดตสำหรับโมดูล {MODULE_NAME}",
 	"UPDATE_INFO_SINGLE": "การติดตั้งปัจจุบันถูกคอมมิท {COMMIT_COUNT} รายการในสาขา {BRANCH_NAME}",
 	"UPDATE_INFO_MULTIPLE": "การติดตั้งปัจจุบันคือ {COMMIT_COUNT} เป็นคอมมิทที่อยู่เบื้องหลังในสาขา {BRANCH_NAME}",
 	"UPDATE_NOTIFICATION_DONE": "การอัปเดตเสร็จสิ้นสำหรับโมดูล {MODULE_NAME}",
 	"UPDATE_NOTIFICATION_ERROR": "เกิดข้อผิดพลาดในการอัปเดตโมดูล {MODULE_NAME}",
-	"UPDATE_NOTIFICATION_NEED-RESTART": "ต้องรีสตาร์ท MagicMirror"
+	"UPDATE_NOTIFICATION_NEED-RESTART": "ต้องรีสตาร์ท Lo Gandey"
 }

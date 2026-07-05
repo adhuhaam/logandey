@@ -44,11 +44,11 @@
 	"NEWSFEED_NO_ITEMS": "Ingen nyhende tilgjengeleg no.",
 	"NEWSFEED_ARTICLE_UNAVAILABLE": "Artikkelen kan ikkje visast her.",
 
-	"UPDATE_NOTIFICATION": "MagicMirror² oppdatering er tilgjengeleg.",
+	"UPDATE_NOTIFICATION": "Lo Gandey² oppdatering er tilgjengeleg.",
 	"UPDATE_NOTIFICATION_MODULE": "Oppdatering tilgjengeleg for modulen {MODULE_NAME}.",
 	"UPDATE_INFO_SINGLE": "noverande installasjon er {COMMIT_COUNT} commit bak {BRANCH_NAME} greinen.",
 	"UPDATE_INFO_MULTIPLE": "noverande installasjon er {COMMIT_COUNT} commits bak {BRANCH_NAME} greinen.",
 	"UPDATE_NOTIFICATION_DONE": "Oppdateringa av modulen {MODULE_NAME} er fullført.",
 	"UPDATE_NOTIFICATION_ERROR": "Det oppstod ein feil under oppdateringa av modulen {MODULE_NAME}.",
-	"UPDATE_NOTIFICATION_NEED-RESTART": "Det er nødvendig med ein omstart av MagicMirror."
+	"UPDATE_NOTIFICATION_NEED-RESTART": "Det er nødvendig med ein omstart av Lo Gandey."
 }

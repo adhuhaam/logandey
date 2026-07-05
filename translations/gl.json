@@ -44,11 +44,11 @@
 	"NEWSFEED_NO_ITEMS": "Non hai novas no momento.",
 	"NEWSFEED_ARTICLE_UNAVAILABLE": "O artigo non se pode mostrar aquí.",
 
-	"UPDATE_NOTIFICATION": "Actualización dispoñible para MagicMirror².",
+	"UPDATE_NOTIFICATION": "Actualización dispoñible para Lo Gandey².",
 	"UPDATE_NOTIFICATION_MODULE": "Actualización dispoñible para o módulo {MODULE_NAME}.",
 	"UPDATE_INFO_SINGLE": "A instalación actual está {COMMIT_COUNT} commits detrás da rama {BRANCH_NAME}.",
 	"UPDATE_INFO_MULTIPLE": "A instalación actual está {COMMIT_COUNT} commits detrás da rama {BRANCH_NAME}.",
 	"UPDATE_NOTIFICATION_DONE": "Actualización feita para o módulo {MODULE_NAME}.",
 	"UPDATE_NOTIFICATION_ERROR": "Erro na actualización do módulo {MODULE_NAME}.",
-	"UPDATE_NOTIFICATION_NEED-RESTART": "É necesario reiniciar MagicMirror."
+	"UPDATE_NOTIFICATION_NEED-RESTART": "É necesario reiniciar Lo Gandey."
 }

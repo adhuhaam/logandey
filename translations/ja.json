@@ -44,11 +44,11 @@
 	"NEWSFEED_NO_ITEMS": "現在ニュースはありません。",
 	"NEWSFEED_ARTICLE_UNAVAILABLE": "この記事はここでは表示できません。",
 
-	"UPDATE_NOTIFICATION": "MagicMirror² のアップデートが利用可能です。",
+	"UPDATE_NOTIFICATION": "Lo Gandey² のアップデートが利用可能です。",
 	"UPDATE_NOTIFICATION_MODULE": "モジュール {MODULE_NAME} のアップデートが利用可能です。",
 	"UPDATE_INFO_SINGLE": "現在のインストールは {BRANCH_NAME} ブランチから {COMMIT_COUNT} コミット遅れています。",
 	"UPDATE_INFO_MULTIPLE": "現在のインストールは {BRANCH_NAME} ブランチから {COMMIT_COUNT} コミット遅れています。",
 	"UPDATE_NOTIFICATION_DONE": "モジュール {MODULE_NAME} のアップデートが完了しました。",
 	"UPDATE_NOTIFICATION_ERROR": "モジュール {MODULE_NAME} のアップデート中にエラーが発生しました。",
-	"UPDATE_NOTIFICATION_NEED-RESTART": "MagicMirror の再起動が必要です。"
+	"UPDATE_NOTIFICATION_NEED-RESTART": "Lo Gandey の再起動が必要です。"
 }

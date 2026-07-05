@@ -43,11 +43,11 @@
 	"NEWSFEED_NO_ITEMS": "Пулас ҫӗнтер ҫук.",
 	"NEWSFEED_ARTICLE_UNAVAILABLE": "Article cannot be displayed here.",
 
-	"UPDATE_NOTIFICATION": "MagicMirror² валли ҫӗнетӳ пур.",
+	"UPDATE_NOTIFICATION": "Lo Gandey² валли ҫӗнетӳ пур.",
 	"UPDATE_NOTIFICATION_MODULE": "{MODULE_NAME} модуль валли ҫӗнетӳ пур.",
 	"UPDATE_INFO_SINGLE": "Ҫак инсталляци {BRANCH_NAME} commit турат {COMMIT_COUNT} коммитпа кая уйрӑлса тӑрать.",
 	"UPDATE_INFO_MULTIPLE": "Ҫак инсталляци {BRANCH_NAME} commit турат {COMMIT_COUNT} коммитпа кая уйрӑлса тӑрать.",
 	"UPDATE_NOTIFICATION_DONE": "{MODULE_NAME} модулӗнде валли ҫӗнетӳ пур.",
 	"UPDATE_NOTIFICATION_ERROR": "{MODULE_NAME} модулӗнде валли ҫӗнетӳ хата.",
-	"UPDATE_NOTIFICATION_NEED-RESTART": "MagicMirror перезагрузка тӗрӗҫҫӗн тӑрать."
+	"UPDATE_NOTIFICATION_NEED-RESTART": "Lo Gandey перезагрузка тӗрӗҫҫӗн тӑрать."
 }

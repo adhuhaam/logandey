@@ -44,11 +44,11 @@
 	"NEWSFEED_NO_ITEMS": "אין חדשות כרגע.",
 	"NEWSFEED_ARTICLE_UNAVAILABLE": "לא ניתן להציג את המאמר כאן.",
 
-	"UPDATE_NOTIFICATION": "עדכון זמין ל-MagicMirror²",
+	"UPDATE_NOTIFICATION": "עדכון זמין ל-Lo Gandey²",
 	"UPDATE_NOTIFICATION_MODULE": "עדכון זמין ב-{MODULE_NAME} מודול",
 	"UPDATE_INFO_SINGLE": "ההתקנה הנוכחית נמצאת מאחור הענף {BRANCH_NAME} ב-{COMMIT_COUNT} מופע",
 	"UPDATE_INFO_MULTIPLE": "ההתקנה הנוכחית נמצאת מאחור הענף {BRANCH_NAME} ב-{COMMIT_COUNT} מופעים",
 	"UPDATE_NOTIFICATION_DONE": "העדכון הסתיים עבור מודול {MODULE_NAME}",
 	"UPDATE_NOTIFICATION_ERROR": "שגיאת עדכון עבור מודול {MODULE_NAME}",
-	"UPDATE_NOTIFICATION_NEED-RESTART": "יש צורך לאתחל את ה-MagicMirror"
+	"UPDATE_NOTIFICATION_NEED-RESTART": "יש צורך לאתחל את ה-Lo Gandey"
 }

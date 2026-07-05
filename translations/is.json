@@ -44,11 +44,11 @@
 	"NEWSFEED_NO_ITEMS": "Engar fréttir í boði núna.",
 	"NEWSFEED_ARTICLE_UNAVAILABLE": "Grein er ekki hægt að sýna hér.",
 
-	"UPDATE_NOTIFICATION": "MagicMirror² uppfærsla í boði.",
+	"UPDATE_NOTIFICATION": "Lo Gandey² uppfærsla í boði.",
 	"UPDATE_NOTIFICATION_MODULE": "Uppfærsla í boði fyrir {MODULE_NAME} module.",
 	"UPDATE_INFO_SINGLE": "Núverandi kerfi er {COMMIT_COUNT} commit á eftir {BRANCH_NAME} branchinu.",
 	"UPDATE_INFO_MULTIPLE": "Núverandi kerfi er {COMMIT_COUNT} commits á eftir {BRANCH_NAME} branchinu.",
 	"UPDATE_NOTIFICATION_DONE": "Uppfærsla lokið fyrir {MODULE_NAME} module",
 	"UPDATE_NOTIFICATION_ERROR": "Villa við uppfærslu fyrir {MODULE_NAME} module",
-	"UPDATE_NOTIFICATION_NEED-RESTART": "Endurræsa MagicMirror er nauðsynlegt."
+	"UPDATE_NOTIFICATION_NEED-RESTART": "Endurræsa Lo Gandey er nauðsynlegt."
 }

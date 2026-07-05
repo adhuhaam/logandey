@@ -1,138 +1,156 @@
 # Lo Gandey
 
-### Smart mirrors, built for the Maldives.
+### The smart mirror, made for the Maldives.
 
-**Lo Gandey** turns an ordinary mirror into a living display — time, weather, news, and calendar at a glance. Designed for Maldivian homes, resorts, offices, and retail spaces.
+**Lo Gandey** transforms a two-way mirror into a private command centre — live weather, time, news, and calendar built for Malé, the atolls, and every island in between.
 
-Always on. Always local. Always yours.
+No foreign defaults. No cloud lock-in. No monthly subscriptions.
 
----
-
-## Why Lo Gandey?
-
-Most smart mirror software is built for Europe or North America — wrong time zones, wrong holidays, wrong news. **Lo Gandey is configured for the Maldives from day one.**
-
-| | Lo Gandey | Generic alternatives |
-|---|-----------|---------------------|
-| **Timezone** | Indian/Maldives (UTC+5) | US / Europe defaults |
-| **Weather** | Malé & island coordinates | Foreign cities |
-| **Calendar** | Maldives public holidays | US / UK holiday feeds |
-| **News** | Local Maldivian headlines | International wire services |
-| **Units** | Metric | Often imperial |
-
-No tinkering required. Plug in, power on, and your mirror speaks your language.
+**Always on. Always local. Always yours.**
 
 ---
 
-## Perfect for
+## The problem with other smart mirrors
 
-**Homes** — Start the day with local weather, time, and headlines without reaching for your phone.
+Most smart mirror software ships configured for London, New York, or Berlin. Wrong timezone. Wrong holidays. Wrong news. Hours of setup — and it still feels foreign.
 
-**Hotels & resorts** — Welcome guests with branded information, events, and island conditions in the lobby or suite.
+**Lo Gandey is different.** Every unit leaves our hands ready for the Maldives:
 
-**Offices & co-working** — Keep teams aligned with shared calendars, news, and a polished reception display.
-
-**Retail & showrooms** — Combine product messaging with live info in a sleek, futuristic fixture customers remember.
-
----
-
-## What you get
-
-Every Lo Gandey mirror ships with a ready-to-run experience:
-
-- **Live clock & date** — Maldives timezone, 24-hour format
-- **Weather** — Current conditions and multi-day forecast for your location
-- **Calendar** — Maldives public holidays and custom event feeds
-- **News ticker** — Rolling local headlines
-- **Compliments & alerts** — A mirror that feels alive, not static
-- **Modular layout** — Widgets positioned exactly where you want them
-- **Silent operation** — Runs fullscreen, borderless, 24/7 on low-power hardware
-
-Need something extra? Calendar sync, resort branding, prayer times, room service menus, occupancy stats — **Lo Gandey is fully customizable.**
+| | **Lo Gandey** | Generic software |
+|---|---------------|------------------|
+| Timezone | Indian/Maldives (UTC+5) | US / Europe |
+| Weather | Your island, your coordinates | Random foreign city |
+| Calendar | Maldives public holidays | US / UK feeds |
+| News | Local Maldivian headlines | International wire |
+| Units | Metric | Often imperial |
+| Support | Direct from the team | Forum threads |
 
 ---
 
-## How it works
+## Who it's for
+
+### Home
+Wake up to Malé weather, the correct time, and today's headlines — without unlocking your phone.
+
+### Hotels & resorts
+Greet guests in the lobby or villa with island conditions, resort events, and branded welcome screens.
+
+### Offices & reception
+A polished, always-current display for visitors, staff schedules, and company announcements.
+
+### Retail & showrooms
+A futuristic fixture that draws eyes and keeps your space feeling premium and current.
+
+---
+
+## What's included
+
+Every Lo Gandey system comes ready to run:
+
+- **Clock & date** — Maldives timezone, clean 24-hour display
+- **Live weather** — Current conditions and multi-day forecast for your exact location
+- **Calendar** — Maldives public holidays plus your custom events
+- **News ticker** — Rolling local headlines across the bottom of the mirror
+- **Modular layout** — Widgets placed exactly where you want them
+- **Silent 24/7 operation** — Fullscreen, borderless, built for always-on use
+- **Low power** — Runs on Raspberry Pi 4 or 5 behind the glass
+
+**Want more?** Resort branding, prayer times, room service menus, occupancy dashboards, guest Wi‑Fi info — we build custom modules to order.
+
+---
+
+## How a Lo Gandey mirror works
 
 ```
-  ┌─────────────┐     ┌──────────────┐     ┌─────────────────┐
-  │  Display +  │ ──▶ │  Raspberry   │ ──▶ │    Lo Gandey    │
-  │ two-way     │     │  Pi 4 / 5    │     │    software     │
-  │ mirror glass│     │  (built-in)  │     │  (this repo)    │
-  └─────────────┘     └──────────────┘     └─────────────────┘
+   ┌────────────────┐      ┌─────────────────┐      ┌──────────────────┐
+   │  Two-way       │      │  Raspberry Pi   │      │  Lo Gandey       │
+   │  mirror glass  │ ───▶ │  4 or 5         │ ───▶ │  display engine  │
+   │  + monitor     │      │  (on-board)     │      │  (local software)│
+   └────────────────┘      └─────────────────┘      └──────────────────┘
 ```
 
-1. **Hardware** — A Raspberry Pi 4 or 5 sits behind the mirror, connected to your display.
-2. **Software** — Lo Gandey runs on boot, fullscreen, with no browser or login required.
-3. **Content** — Weather, news, and calendar update automatically over Wi‑Fi.
+1. A compact computer sits hidden behind the mirror.
+2. Lo Gandey starts automatically on power-up — no login, no browser tabs.
+3. Weather, news, and calendar refresh over your Wi‑Fi connection.
 
-We handle the software. You — or we — handle the frame, glass, and install.
-
----
-
-## Built for reliability
-
-Lo Gandey is engineered for mirrors that stay on for months without babysitting:
-
-- Auto-starts on power-up
-- Recovers from network drops
-- Lightweight — runs smoothly on Raspberry Pi 4 (4 GB RAM recommended)
-- Configurable per unit — each mirror can have its own location, branding, and modules
-- Remote-friendly — update config and redeploy without opening the frame
+We supply the software. We can supply the full mirror too.
 
 ---
 
-## Get started (self-install)
+## Built to stay on
 
-For technicians, developers, and early adopters who want to run Lo Gandey themselves:
+Lo Gandey is designed for mirrors that run for months without attention:
 
-**Requirements:** Node.js 22+, Raspberry Pi OS 64-bit (desktop), Raspberry Pi 4 or 5
+- Starts automatically when power returns
+- Recovers gracefully from network interruptions
+- Lightweight enough for Pi 4 with 4 GB RAM
+- Each unit independently configured — different island, different layout, different brand
+- Updates applied locally — no dependency on external app stores or third-party accounts
+
+---
+
+## Packages
+
+### Home Mirror
+Ready-to-hang smart mirror for apartments and villas. Standard layout, Maldives defaults, one island location.
+
+### Business Mirror
+Custom branding, multi-module layouts, and priority setup for hotels, offices, and retail.
+
+### Software License
+For integrators and builders who supply their own frame and hardware. Full Lo Gandey engine, your enclosure.
+
+### Custom
+Multi-screen setups, resort-wide deployments, bespoke modules. Tell us what you need — we design it.
+
+---
+
+## Technical setup
+
+For installers and technical customers deploying Lo Gandey on a Raspberry Pi:
+
+**You need:** Node.js 22+, Raspberry Pi OS 64-bit (desktop), Raspberry Pi 4 or 5
+
+Copy the Lo Gandey software folder to your device, then:
 
 ```bash
-git clone https://github.com/adhuhaam/logandey.git
 cd logandey
 node --run install-mm
 cp config/config.js.sample config/config.js
 ```
 
-**Run in browser (testing):**
+**Preview in a browser (testing):**
 
 ```bash
 npm run server
 ```
 
-Open [http://localhost:8080](http://localhost:8080)
+Open `http://localhost:8080`
 
-**Run on Raspberry Pi (production):**
+**Production on Raspberry Pi:**
 
 ```bash
 node --run start:x11
 ```
 
-Edit `config/config.js` to set your island, modules, and layout. Validate anytime with `npm run config:check`.
+Edit `config/config.js` for your island coordinates, modules, and layout. Run `npm run config:check` to validate.
 
 ---
 
-## Order a mirror
+## Get in touch
 
-Lo Gandey is available as:
+Ready for a mirror in your home, hotel, or office? We handle design, software, and installation across the Maldives.
 
-- **Turnkey smart mirrors** — Frame, glass, Pi, and software, ready to hang
-- **Software-only licenses** — For builders and integrators who supply their own hardware
-- **Custom deployments** — Resort branding, multi-screen setups, and bespoke modules
+**Email:** adhuhamlayaal55@gmail.com
 
-**Interested?** Reach out to discuss your space, timeline, and budget.
-
-- GitHub: [github.com/adhuhaam](https://github.com/adhuhaam)
-- Repository: [github.com/adhuhaam/logandey](https://github.com/adhuhaam/logandey)
-- Email: adhuhamlayaal55@gmail.com
+Tell us your space, your island, and what you want on the mirror — we'll reply with options and pricing.
 
 ---
 
-## About
+## About Lo Gandey
 
-**Lo Gandey** — *logandey* in Dhivehi spirit, smart mirror technology in practice.
+**Lo Gandey** — smart mirror technology rooted in the Maldives.
 
-Made in the Maldives, for the Maldives.
+Designed here. Configured here. Supported here.
 
 © 2026 Lo Gandey. All rights reserved.

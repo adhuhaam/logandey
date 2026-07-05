@@ -209,7 +209,7 @@ function getVersion (req, res) {
  * @returns {string} `User-Agent` to be used
  */
 function getUserAgent () {
-	const defaultUserAgent = `Mozilla/5.0 (Node.js ${Number(process.version.match(/^v(\d+\.\d+)/)[1])}) MagicMirror/${global.version}`;
+	const defaultUserAgent = `Mozilla/5.0 (Node.js ${Number(process.version.match(/^v(\d+\.\d+)/)[1])}) LoGandey/${global.version}`;
 
 	if (typeof global.config === "undefined") {
 		return defaultUserAgent;

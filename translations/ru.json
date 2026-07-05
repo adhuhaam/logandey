@@ -44,11 +44,11 @@
 	"NEWSFEED_NO_ITEMS": "В данный момент нет новостей.",
 	"NEWSFEED_ARTICLE_UNAVAILABLE": "Статья не может быть отображена здесь.",
 
-	"UPDATE_NOTIFICATION": "Есть обновление для MagicMirror².",
+	"UPDATE_NOTIFICATION": "Есть обновление для Lo Gandey².",
 	"UPDATE_NOTIFICATION_MODULE": "Есть обновление для {MODULE_NAME} модуля.",
 	"UPDATE_INFO_SINGLE": "Данная инсталляция позади {BRANCH_NAME} commit ветки на {COMMIT_COUNT} коммитов.",
 	"UPDATE_INFO_MULTIPLE": "Данная инсталляция позади {BRANCH_NAME} commits ветки на {COMMIT_COUNT} коммитов.",
 	"UPDATE_NOTIFICATION_DONE": "Обновление модуля {MODULE_NAME} завершено.",
 	"UPDATE_NOTIFICATION_ERROR": "Ошибка обновления модуля {MODULE_NAME}.",
-	"UPDATE_NOTIFICATION_NEED-RESTART": "Требуется перезапуск MagicMirror."
+	"UPDATE_NOTIFICATION_NEED-RESTART": "Требуется перезапуск Lo Gandey."
 }
