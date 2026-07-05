@@ -28,9 +28,7 @@ let config = {
 	httpsCertificate: "",	// HTTPS Certificate path, only require when useHttps is true
 
 	language: "en",
-	locale: "en-US",   // this variable is provided as a consistent location
-			   // it is currently only used by 3rd party modules. no MagicMirror code uses this value
-			   // as we have no usage, we  have no constraints on what this field holds
+	locale: "en-MV",   // Maldives locale (used by 3rd party modules)
 			   // see https://en.wikipedia.org/wiki/Locale_(computer_software) for the possibilities
 
 	logLevel: ["INFO", "LOG", "WARN", "ERROR"], // Add "DEBUG" for even more logging
@@ -47,18 +45,23 @@ let config = {
 		},
 		{
 			module: "clock",
-			position: "top_left"
+			position: "top_left",
+			config: {
+				timezone: "Indian/Maldives",
+				lat: 4.1755,
+				lon: 73.5093
+			}
 		},
 		{
 			module: "calendar",
-			header: "US Holidays",
+			header: "Maldives Holidays",
 			position: "top_left",
 			config: {
 				calendars: [
 					{
 						fetchInterval: 7 * 24 * 60 * 60 * 1000,
 						symbol: "calendar-check",
-						url: "https://ics.calendarlabs.com/76/mm3137/US_Holidays.ics"
+						url: "https://calendar.google.com/calendar/ical/en.mv.official%23holiday%40group.v.calendar.google.com/public/basic.ics"
 					}
 				]
 			}
@@ -73,8 +76,8 @@ let config = {
 			config: {
 				weatherProvider: "openmeteo",
 				type: "current",
-				lat: 40.776676,
-				lon: -73.971321
+				lat: 4.1755,
+				lon: 73.5093
 			}
 		},
 		{
@@ -84,8 +87,8 @@ let config = {
 			config: {
 				weatherProvider: "openmeteo",
 				type: "forecast",
-				lat: 40.776676,
-				lon: -73.971321
+				lat: 4.1755,
+				lon: 73.5093
 			}
 		},
 		{
@@ -94,8 +97,8 @@ let config = {
 			config: {
 				feeds: [
 					{
-						title: "New York Times",
-						url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+						title: "TNN Maldives",
+						url: "https://tnn.mv/en/rss/category/local-news"
 					}
 				],
 				showSourceTitle: true,
