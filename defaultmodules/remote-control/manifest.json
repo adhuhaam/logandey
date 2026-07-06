@@ -1,0 +1,28 @@
+{
+  "name": "Lo Gandey",
+  "short_name": "Lo Gandey",
+  "description": "Control your Lo Gandey smart mirror",
+  "start_url": "../../remote.html",
+  "scope": "../../",
+  "id": "/remote.html",
+  "display": "standalone",
+  "background_color": "#0b1a2e",
+  "theme_color": "#00a896",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "img/lo-gandey-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/lo-gandey-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["lifestyle", "utilities"],
+  "prefer_related_applications": false
+}

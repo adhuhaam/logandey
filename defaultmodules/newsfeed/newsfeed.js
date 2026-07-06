@@ -182,9 +182,10 @@ Module.register("newsfeed", {
 		const item = this.newsItems[this.activeItem];
 		this.activeItemHash = item.hash;
 
-		const items = this.newsItems.map(function (item) {
-			item.publishDate = moment(new Date(item.pubdate)).fromNow();
-			return item;
+		const items = this.newsItems.map((newsItem) => {
+			newsItem.publishDate = moment(new Date(newsItem.pubdate)).fromNow();
+			newsItem.isDhivehi = this.containsThaana(newsItem.title) || this.containsThaana(newsItem.description);
+			return newsItem;
 		});
 
 		return {
@@ -195,8 +196,18 @@ Module.register("newsfeed", {
 			title: item.title,
 			url: this.getActiveItemURL(),
 			description: item.description,
+			isDhivehi: this.containsThaana(item.title) || this.containsThaana(item.description),
 			items: items
 		};
+	},
+
+	/**
+	 * Detect Dhivehi text via Thaana script characters (U+0780–U+07BF).
+	 * @param {string} text
+	 * @returns {boolean}
+	 */
+	containsThaana (text) {
+		return /[\u0780-\u07BF]/.test(text || "");
 	},
 
 	getActiveItemURL () {

@@ -3,7 +3,7 @@
 Module.register("weather", {
 	// Default module config.
 	defaults: {
-		weatherProvider: "openweathermap",
+		weatherProvider: "meteorologymv",
 		roundTemp: false,
 		type: "current", // current, forecast, daily (equivalent to forecast), hourly
 		lang: config.language,

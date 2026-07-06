@@ -19,13 +19,14 @@ alwaysApply: true
 
 - `config/config.js` — active config (gitignored)
 - `config/config.js.sample` — Maldives template (committed)
-- `defaultmodules/` — built-in modules | `modules/` — custom modules
+- `defaultmodules/` — built-in modules | `modules/` — custom modules (gitignored)
+- `remote-control` — **default** phone remote (`/remote.html`), Lo Gandey branded UI, optional on-mirror QR (`bottom_right`)
 - `updatenotification` module **removed** from default config (no git/update checks)
 
 ## Maldives defaults (Malé)
 
 - `locale`: `en-MV` | `timezone`: `Indian/Maldives` | `lat/lon`: `4.1755`, `73.5093`
-- Weather: Open-Meteo | Calendar: Google MV holidays ICS | News: TNN local RSS
+- Weather: Maldives Meteorology (`meteorologymv`, Hulhule/Malé) | Calendar: Google MV holidays ICS | News: Maldivian RSS feeds (5-day max age)
 
 ## Run commands
 

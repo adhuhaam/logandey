@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>%%TRANSLATE:TITLE%%</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no"
+    />
+    <meta name="google" content="notranslate" />
+    <meta name="description" content="%%TRANSLATE:APP_DESCRIPTION%%" />
+    <meta name="theme-color" content="#00a896" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Lo Gandey" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="manifest" href="defaultmodules/remote-control/manifest.json" />
+    <link rel="icon" href="defaultmodules/remote-control/img/lo-gandey-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="defaultmodules/remote-control/img/lo-gandey-icon.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/roboto.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="defaultmodules/remote-control/remote/remote.css" />
+  </head>
+  <body class="remote-body">
+    <div class="remote-backdrop" aria-hidden="true"></div>
+    <div id="pwa-install-banner" class="pwa-install-banner hidden" role="region" aria-label="Install app">
+      <span>%%TRANSLATE:PWA_INSTALL_HINT%%</span>
+      <button type="button" id="pwa-install-button" class="pwa-install-button">%%TRANSLATE:PWA_INSTALL%%</button>
+      <button type="button" id="pwa-install-dismiss" class="pwa-install-dismiss" aria-label="Dismiss">×</button>
+    </div>
+    <div class="container normal">
+      <div id="module_1_remote-control" class="app">
+        <header class="header">
+          <div
+            id="back-button"
+            class="hidden button"
+            role="button"
+            aria-label="%%TRANSLATE:BACK%%"
+            tabindex="0"
+          >
+            <span class="fa fa-fw fa-angle-left" aria-hidden="true"></span>
+          </div>
+          <div class="header-brand">
+            <div class="header-logo">
+              <img
+                src="defaultmodules/remote-control/img/lo-gandey-icon.png"
+                alt="Lo Gandey"
+                width="52"
+                height="52"
+                class="header-logo-img"
+              />
+            </div>
+            <div class="header-text">
+              <span class="header-title">%%TRANSLATE:TITLE%%</span>
+              <span class="header-tagline">%%TRANSLATE:TAGLINE%%</span>
+            </div>
+          </div>
+          <div class="header-spacer"></div>
+        </header>
+        <main class="main-content"></main>
+        <footer class="remote-footer">
+          <span class="remote-footer-mark" aria-hidden="true"></span>
+          <span class="remote-footer-text">%%TRANSLATE:FOOTER%%</span>
+        </footer>
+        <div id="load-error" class="hidden">
+          <span class="fa fa-fw fa-exclamation-circle" aria-hidden="true"></span>
+          <span class="text">%%TRANSLATE:LOAD_ERROR%%</span>
+          <a href="mailto:adhuhamlayaal55@gmail.com">%%TRANSLATE:ISSUE_LINK%%</a>
+        </div>
+        <div id="result-overlay" class="overlay hidden"></div>
+        <div id="result" class="result hidden">
+          <div id="close-result"><span class="fa fa-times-circle delete-button"></span></div>
+          <div id="result-contents"></div>
+        </div>
+        <div id="popup-container" class="popup hidden">
+          <div id="close-popup"><span class="fa fa-times-circle delete-button"></span></div>
+          <div id="popup-contents" class="popup-contents"></div>
+        </div>
+        <div id="success-popup" class="success-popup hidden">
+          <span class="fa fa-fw fa-check-circle"></span>
+          <span class="text">%%TRANSLATE:DONE%%</span>
+        </div>
+      </div>
+    </div>
+    <script src="%%CONFIG_PATH%%"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script type="importmap">
+      {"imports": {"marked": "./node_modules/marked/lib/marked.esm.js"}}
+    </script>
+    <script type="module">
+      try {
+        const socketMod = await import("./js/socketclient.js");
+        if (socketMod.MMSocket) {
+          globalThis.MMSocket = socketMod.MMSocket;
+        }
+        await import("./defaultmodules/remote-control/remote/remote-menu.mjs");
+        const {Remote} = await import("./defaultmodules/remote-control/remote/remote.mjs");
+        await Remote.init();
+      } catch (error) {
+        console.error("Remote UI failed to load:", error);
+        const el = document.querySelector("#load-error");
+        if (el) el.classList.remove("hidden");
+      }
+    </script>
+  </body>
+</html>

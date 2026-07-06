@@ -42,10 +42,6 @@ const defaults = {
 
 	modules: [
 		{
-			module: "updatenotification",
-			position: "top_center"
-		},
-		{
 			module: "helloworld",
 			position: "upper_third",
 			classes: "large thin",

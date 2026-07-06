@@ -45,9 +45,9 @@
               {% if config.showPublishDate %}{{ item.publishDate }}:{% endif %}
             </div>
           {% endif %}
-          <div class="newsfeed-title bright medium light{{ ' no-wrap' if not config.wrapTitle }}">{{ escapeTitle(item.title, item.url, config.dangerouslyDisableAutoEscaping or (config.allowedBasicHtmlTags | length), config.showTitleAsUrl) }}</div>
+          <div class="newsfeed-title bright medium light{{ ' newsfeed-dhivehi' if item.isDhivehi }}{{ ' no-wrap' if not config.wrapTitle }}"{% if item.isDhivehi %} lang="dv"{% endif %}>{{ escapeTitle(item.title, item.url, config.dangerouslyDisableAutoEscaping or (config.allowedBasicHtmlTags | length), config.showTitleAsUrl) }}</div>
           {% if config.showDescription %}
-            <div class="newsfeed-desc small light{{ ' no-wrap' if not config.wrapDescription }}">
+            <div class="newsfeed-desc small light{{ ' newsfeed-dhivehi' if item.isDhivehi }}{{ ' no-wrap' if not config.wrapDescription }}"{% if item.isDhivehi %} lang="dv"{% endif %}>
               {% if config.truncDescription %}
                 {{ escapeText(item.description | truncate(config.lengthDescription) , config.dangerouslyDisableAutoEscaping or (config.allowedBasicHtmlTags | length)) }}
               {% else %}
@@ -68,9 +68,9 @@
           {% if config.showPublishDate %}{{ publishDate }}:{% endif %}
         </div>
       {% endif %}
-      <div class="newsfeed-title bright medium light{{ ' no-wrap' if not config.wrapTitle }}">{{ escapeTitle(title, url, config.dangerouslyDisableAutoEscaping or (config.allowedBasicHtmlTags | length), config.showTitleAsUrl) }}</div>
+      <div class="newsfeed-title bright medium light{{ ' newsfeed-dhivehi' if isDhivehi }}{{ ' no-wrap' if not config.wrapTitle }}"{% if isDhivehi %} lang="dv"{% endif %}>{{ escapeTitle(title, url, config.dangerouslyDisableAutoEscaping or (config.allowedBasicHtmlTags | length), config.showTitleAsUrl) }}</div>
       {% if config.showDescription %}
-        <div class="newsfeed-desc small light{{ ' no-wrap' if not config.wrapDescription }}">
+        <div class="newsfeed-desc small light{{ ' newsfeed-dhivehi' if isDhivehi }}{{ ' no-wrap' if not config.wrapDescription }}"{% if isDhivehi %} lang="dv"{% endif %}>
           {% if config.truncDescription %}
             {{ escapeText(description | truncate(config.lengthDescription) , config.dangerouslyDisableAutoEscaping or (config.allowedBasicHtmlTags | length)) }}
           {% else %}

@@ -9,19 +9,12 @@
  * see https://docs.magicmirror.builders/configuration/introduction.html#enviromnent-variables
  */
 let config = {
-	address: "localhost",	// Address to listen on, can be:
-							// - "localhost", "127.0.0.1", "::1" to listen on loopback interface
-							// - another specific IPv4/6 to listen on a specific interface
-							// - "0.0.0.0", "::" to listen on any interface
-							// Default, when address config is left out or empty, is "localhost"
+	address: "0.0.0.0",	// Listen on all interfaces so phones on Wi‑Fi can use the remote
 	port: 8080,
-	basePath: "/",	// The URL path where MagicMirror² is hosted. If you are using a Reverse proxy
+	basePath: "/",	// The URL path where Lo Gandey is hosted. If you are using a Reverse proxy
 									// you must set the sub path here. basePath must end with a /
-	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"],	// Set [] to allow all IP addresses
-									// or add a specific IPv4 of 192.168.1.5 :
-									// ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.1.5"],
-									// or IPv4 range of 192.168.3.0 --> 192.168.3.15 use CIDR format :
-									// ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.3.0/28"],
+	ipWhitelist: [],	// Set [] to allow all devices on your LAN (needed for QR remote access)
+									// Or restrict to specific IPs, e.g. ["127.0.0.1", "::1", "192.168.1.42"],
 
 	useHttps: false,			// Support HTTPS or not, default "false" will use HTTP
 	httpsPrivateKey: "",	// HTTPS private key path, only require when useHttps is true
@@ -34,6 +27,7 @@ let config = {
 	logLevel: ["INFO", "LOG", "WARN", "ERROR"], // Add "DEBUG" for even more logging
 	timeFormat: 24,
 	units: "metric",
+	zoom: 0.75,
 
 	modules: [
 		{
@@ -50,14 +44,15 @@ let config = {
 		},
 		{
 			module: "calendar",
-			header: "Maldives Holidays",
+			header: "Calendar",
 			position: "top_left",
 			config: {
+				maximumEntries: 10,
 				calendars: [
 					{
-						fetchInterval: 7 * 24 * 60 * 60 * 1000,
-						symbol: "calendar-check",
-						url: "https://calendar.google.com/calendar/ical/en.mv.official%23holiday%40group.v.calendar.google.com/public/basic.ics"
+						symbol: "calendar",
+						name: "iCloud",
+						url: "https://p157-caldav.icloud.com/published/2/YOUR-ICAL-FEED-ID"
 					}
 				]
 			}
@@ -70,7 +65,8 @@ let config = {
 			module: "weather",
 			position: "top_right",
 			config: {
-				weatherProvider: "openmeteo",
+				weatherProvider: "meteorologymv",
+				station: "Hulhule",
 				type: "current",
 				lat: 4.1755,
 				lon: 73.5093
@@ -81,7 +77,8 @@ let config = {
 			position: "top_right",
 			header: "Weather Forecast",
 			config: {
-				weatherProvider: "openmeteo",
+				weatherProvider: "meteorologymv",
+				station: "Hulhule",
 				type: "forecast",
 				lat: 4.1755,
 				lon: 73.5093
@@ -91,16 +88,70 @@ let config = {
 			module: "newsfeed",
 			position: "bottom_bar",
 			config: {
-				feeds: [
-					{
-						title: "TNN Maldives",
-						url: "https://tnn.mv/en/rss/category/local-news"
-					}
-				],
 				showSourceTitle: true,
 				showPublishDate: true,
+				updateInterval: 30 * 1000,
+				reloadInterval: 5 * 60 * 1000,
+				ignoreOldItems: true,
+				ignoreOlderThan: 5 * 24 * 60 * 60 * 1000,
+				feeds: [
+					{
+						title: "TNN",
+						url: "https://tnn.mv/en/rss/latest-posts"
+					},
+					{
+						title: "TNN Local",
+						url: "https://tnn.mv/en/rss/category/local-news"
+					},
+					{
+						title: "adduLIVE",
+						url: "https://www.addulive.com/feed"
+					},
+					{
+						title: "Sun Online",
+						url: "https://sun.mv/feed"
+					},
+					{
+						title: "Vaguthu",
+						url: "https://vaguthu.mv/feed"
+					},
+					{
+						title: "VNews",
+						url: "https://vnews.mv/rss"
+					}
+				],
 				broadcastNewsFeeds: true,
 				broadcastNewsUpdates: true
+			}
+		},
+		{
+			module: "remote-control",
+			position: "bottom_right",
+			config: {
+				// Optional API key — generate with: node -e "console.log(require('crypto').randomUUID())"
+				apiKey: "",
+				secureEndpoints: false,
+				showModuleApiMenu: true,
+				showQRCode: true,
+				qrCodeSize: 100,
+				qrCodePosition: "replace",
+				exclusiveModules: ["MMM-FIFAWorldCup"]
+			}
+		},
+		{
+			module: "MMM-FIFAWorldCup",
+			position: "fullscreen_below",
+			classes: "MMM-FIFAWorldCup",
+			hiddenOnStartup: true,
+			config: {
+				title: "FIFA World Cup 2026",
+				subtitle: "Knockout Bracket",
+				showHero: true,
+				showFooter: true,
+				updateInterval: 3 * 60 * 1000,
+				colored: true,
+				showDates: true,
+				animationSpeed: 1000
 			}
 		},
 	]
